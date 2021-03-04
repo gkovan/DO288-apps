@@ -87,7 +87,7 @@ pipeline {
 
                   oc new-app --as-deployment-config ${APP_NAME}:latest -n ${DEV_PROJECT}
 
-                  // TODO: Expose the ${APP_NAME} service for external access
+                  echo '### GK create a route ###'
                   oc expose svc ${APP_NAME} -n ${DEV_PROJECT}
 
                 '''
